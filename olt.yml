@@ -1,0 +1,9 @@
+---
+
+ip_addr1 : 192.168.1.100
+ip_adr2 : 192.168.1.1
+upstream_fqdn : clgrab42mmler004
+upstream_port : xe-0/0/0
+fqdn : shelabacolt001
+card : 5
+pop_name : Sheldon POP
