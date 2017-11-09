@@ -1,0 +1,51 @@
+
+
+card add {{ card }}
+
+cpe-mgr add local 1-{{ card }}-1-0/eth compact none
+cpe-mgr add local 1-{{ card }}-2-0/eth compact none
+cpe-mgr add local 1-{{ card }}-3-0/eth compact none
+cpe-mgr add local 1-{{ card }}-4-0/eth compact none
+cpe-mgr add local 1-{{ card }}-5-0/eth compact none
+cpe-mgr add local 1-{{ card }}-6-0/eth compact none
+cpe-mgr add local 1-{{ card }}-7-0/eth compact none
+cpe-mgr add local 1-{{ card }}-8-0/eth compact none
+cpe-mgr add local 1-{{ card }}-9-0/eth compact none
+cpe-mgr add local 1-{{ card }}-10-0/eth compact none
+cpe-mgr add local 1-{{ card }}-11-0/eth compact none
+cpe-mgr add local 1-{{ card }}-12-0/eth compact none
+cpe-mgr add local 1-{{ card }}-13-0/eth compact none
+cpe-mgr add local 1-{{ card }}-14-0/eth compact none
+cpe-mgr add local 1-{{ card }}-15-0/eth compact none
+cpe-mgr add local 1-{{ card }}-16-0/eth compact none
+cpe-mgr add local 1-{{ card }}-17-0/eth compact none
+cpe-mgr add local 1-{{ card }}-18-0/eth compact none
+cpe-mgr add local 1-{{ card }}-19-0/eth compact none
+cpe-mgr add local 1-{{ card }}-20-0/eth compact none
+
+cpe-mgr add config member 1-{{ card }}-1-0/eth group 2 path bkup/{{ ip_addr1 }}/1/1
+cpe-mgr add config member 1-{{ card }}-2-0/eth group 2 path bkup/{{ ip_addr1 }}/1/2
+cpe-mgr add config member 1-{{ card }}-3-0/eth group 2 path bkup/{{ ip_addr1 }}/1/3
+cpe-mgr add config member 1-{{ card }}-4-0/eth group 2 path bkup/{{ ip_addr1 }}/1/4
+cpe-mgr add config member 1-{{ card }}-5-0/eth group 2 path bkup/{{ ip_addr1 }}/1/5
+cpe-mgr add config member 1-{{ card }}-6-0/eth group 2 path bkup/{{ ip_addr1 }}/1/6
+cpe-mgr add config member 1-{{ card }}-7-0/eth group 2 path bkup/{{ ip_addr1 }}/1/7
+cpe-mgr add config member 1-{{ card }}-8-0/eth group 2 path bkup/{{ ip_addr1 }}/1/8
+cpe-mgr add config member 1-{{ card }}-9-0/eth group 2 path bkup/{{ ip_addr1 }}/1/9
+cpe-mgr add config member 1-{{ card }}-10-0/eth group 2 path bkup/{{ ip_addr1 }}/1/10
+cpe-mgr add config member 1-{{ card }}-11-0/eth group 2 path bkup/{{ ip_addr1 }}/1/11
+cpe-mgr add config member 1-{{ card }}-12-0/eth group 2 path bkup/{{ ip_addr1 }}/1/12
+cpe-mgr add config member 1-{{ card }}-13-0/eth group 2 path bkup/{{ ip_addr1 }}/1/13
+cpe-mgr add config member 1-{{ card }}-14-0/eth group 2 path bkup/{{ ip_addr1 }}/1/14
+cpe-mgr add config member 1-{{ card }}-15-0/eth group 2 path bkup/{{ ip_addr1 }}/1/15
+cpe-mgr add config member 1-{{ card }}-16-0/eth group 2 path bkup/{{ ip_addr1 }}/1/16
+cpe-mgr add config member 1-{{ card }}-17-0/eth group 2 path bkup/{{ ip_addr1 }}/1/17
+cpe-mgr add config member 1-{{ card }}-18-0/eth group 2 path bkup/{{ ip_addr1 }}/1/18
+cpe-mgr add config member 1-{{ card }}-19-0/eth group 2 path bkup/{{ ip_addr1 }}/1/19
+cpe-mgr add config member 1-{{ card }}-20-0/eth group 2 path bkup/{{ ip_addr1 }}/1/20
+
+bridge add 1-{{ card }}-[1-20]-0/eth downlink-data vlan 90 tagged ipktrule 1 epktrule 2
+bridge stats enable 1-{{ card }}-[1-20]-0-eth-90/bridge
+
+
+
